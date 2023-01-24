@@ -1,6 +1,6 @@
 Progetto 1 (Concorrenza) Sistemi Distribuiti 2021/2022
 
-Volpato Mattia 866316
+Volpato Mattia
 
 Il progetto è stato organizzato come un Java Project suddiviso in
 due package principali:
