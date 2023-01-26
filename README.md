@@ -32,7 +32,8 @@ maniera, sfruttando il polimorfismo ogni comando viene passato alla classe
 GestoreContoCorrente, che provvede a eseguire l'operazione richiesta.
 
 ### Client Design
-Per quanto riguarda il package client, la classe Client si occupa di
+Per quanto riguarda il package client, la classe Client si occupa di:
+
 	- reperire l'indirizzo e la porta di accesso del 
 	  servizio presso il Registry;
 	- effettuare la creazione di un nuovo conto presso il servizio;
