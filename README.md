@@ -44,7 +44,7 @@ servizio presso il Registry;
 - creare un un'istanza della classe OperationFactory e lanciarla 
 come nuovo Thread;
 - prelevare le richieste generate dal buffer condiviso OperationBuffer 
-- e comunicarle al servizio;
+e comunicarle al servizio;
 
 La classe ***OperationFactory*** genera un certo numero di richieste casuali: 
 in particolare, il codice del conto viene passato da ***Client***, le quantità 
@@ -56,13 +56,12 @@ non vanno a buon fine, ma vengono comunque gestite correttamente dal servizio.
 
 Le 4 classi da lanciare sono nell'ordine
 	
-	1) registry.RegistryLauncher (avvio del Registry);
-	2) contoCorrente.server.ServerLauncher 
-	   (avvio del servizio ContoCorrente);
-	3) contoCorrente.server.ContoCorrenteRegister 
-	   (registrazione del servizio ContoCorrente presso il Registry);
-	4) contoCorrente.client.Client 
-	   (simulazione delle richieste dei client al servizio ContoCorrente);
+1) registry.RegistryLauncher (avvio del Registry);
+2) contoCorrente.server.ServerLauncher (avvio del servizio ContoCorrente);
+3) contoCorrente.server.ContoCorrenteRegister 
+(registrazione del servizio ContoCorrente presso il Registry);
+4) contoCorrente.client.Client 
+(simulazione delle richieste dei client al servizio ContoCorrente);
 
 E' possibile lanciare più istanze parallele della classe ***Client***, modificando nel caso 
 le costanti che regolano il numero minimo di richieste inviate 
