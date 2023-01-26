@@ -7,16 +7,16 @@ Progetto eclipse che simula un **Registry** remoto con lo scopo di permettere l'
 Il progetto è organizzato come un **Java Project** suddiviso in
 due package principali:
 	
-	- **registry**, contentente la classi per l'implementazione e il lancio del Registry;
+	- registry, contentente la classi per l'implementazione e il lancio del Registry;
 
-	- **contoCorrente**, a sua volta suddiviso nei due package:
-		- **server**, contenente la logica del backend del servizio;
-		- **client**, contenente le classi per simulare l'esecuzione di più client e verificare il comportamento del backend.
+	- contoCorrente, a sua volta suddiviso nei due package:
+		- server, contenente la logica del backend del servizio;
+		- client, contenente le classi per simulare l'esecuzione di più client e verificare il comportamento del backend.
 
 ### Registry Design
 Per gestire la distribuzione del sistema sono stati creati due classi header 
 (**RegHeader** e **Header**) che contengono gli indirizzi del Registry (noto) e del server 
-che gestisce il servizio ContoCorrente (utilizzato soltanto per la fase di 
+che gestisce il servizio **ContoCorrente** (utilizzato soltanto per la fase di 
 registrazione del servizio presso il Registry), oltre ai caratteri utilizzati 
 nei rispettivi protocolli.
 
@@ -42,8 +42,8 @@ Per quanto riguarda il package client, la classe **Client** si occupa di:
 	- prelevare le richieste generate dal buffer condiviso OperationBuffer 
 	  e comunicarle al servizio;
 
-La classe **OperationFactory** genera un certo numero di richieste casuali: 
-in particolare, il codice del conto viene passato da **Client**, le quantità 
+La classe ***OperationFactory*** genera un certo numero di richieste casuali: 
+in particolare, il codice del conto viene passato da ***Client***, le quantità 
 numeriche vengono generate casualmente e i codici dei clienti estratti in maniera 
 aleatoria da una lista statica. Essendo generate casualmente, molte richieste 
 non vanno a buon fine, ma vengono comunque gestite correttamente dal servizio.
