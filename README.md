@@ -3,7 +3,7 @@ Progetto eclipse che simula un ***Registry*** remoto con lo scopo di permettere 
 
 ## Descrizione del progetto
 La descrizione del progetto e di tutte le funzionalità richieste è contenuta nel file 
-<code>Project-Description-pdf</code>
+<code>Project-Description-pdf</code>.
 
 ## Organizzazione delle classi
 Il progetto è organizzato come un ***Java Project*** suddiviso in
