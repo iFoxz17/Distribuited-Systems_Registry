@@ -9,11 +9,11 @@ La descrizione del progetto e di tutte le funzionalità richieste è contenuta n
 Il progetto è organizzato come un ***Java Project*** suddiviso in
 due package principali:
 	
-	- registry, contentente la classi per l'implementazione e il lancio del Registry;
+- registry, contentente la classi per l'implementazione e il lancio del Registry;
 
-	- contoCorrente, a sua volta suddiviso nei due package:
-		- server, contenente la logica del backend del servizio;
-		- client, contenente le classi per simulare l'esecuzione di più client e verificare il comportamento del backend.
+- contoCorrente, a sua volta suddiviso nei due package:
+	- server, contenente la logica del backend del servizio;
+	- client, contenente le classi per simulare l'esecuzione di più client e verificare il comportamento del backend.
 
 ## Progettazione e design
 
@@ -38,13 +38,13 @@ maniera, sfruttando il polimorfismo ogni comando viene passato alla classe
 ### Client Design
 Per quanto riguarda il package client, la classe ***Client*** si occupa di:
 
-	- reperire l'indirizzo e la porta di accesso del 
-	  servizio presso il Registry;
-	- effettuare la creazione di un nuovo conto presso il servizio;
-	- creare un un'istanza della classe OperationFactory e lanciarla 
-        come nuovo Thread;
-	- prelevare le richieste generate dal buffer condiviso OperationBuffer 
-	  e comunicarle al servizio;
+- reperire l'indirizzo e la porta di accesso del 
+servizio presso il Registry;
+- effettuare la creazione di un nuovo conto presso il servizio;
+- creare un un'istanza della classe OperationFactory e lanciarla 
+come nuovo Thread;
+- prelevare le richieste generate dal buffer condiviso OperationBuffer 
+- e comunicarle al servizio;
 
 La classe ***OperationFactory*** genera un certo numero di richieste casuali: 
 in particolare, il codice del conto viene passato da ***Client***, le quantità 
