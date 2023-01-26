@@ -48,4 +48,24 @@ numeriche vengono generate casualmente e i codici dei clienti estratti in manier
 aleatoria da una lista statica. Essendo generate casualmente, molte richieste 
 non vanno a buon fine, ma vengono comunque gestite correttamente dal servizio.
 
+## Istruzioni per l'avvio
+
+Le 4 classi da lanciare sono nell'ordine
+	
+	1) registry.RegistryLauncher (avvio del Registry);
+	2) contoCorrente.server.ServerLauncher 
+	   (avvio del servizio ContoCorrente);
+	3) contoCorrente.server.ContoCorrenteRegister 
+	   (registrazione del servizio ContoCorrente presso il Registry);
+	4) contoCorrente.client.Client 
+	   (simulazione delle richieste dei client al servizio ContoCorrente);
+
+E' possibile lanciare più istanze parallele della classe ***Client***, modificando nel caso 
+le costanti che regolano il numero minimo di richieste inviate 
+(sia nella classe ***Client*** che nella classe ***OperationFactory***) e la pausa 
+tra una richiesta e la successiva.
+
+
+
+
 
